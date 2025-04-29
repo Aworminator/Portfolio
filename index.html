@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p class="lead">
+          I am a passionate developer ready to build amazing things.
+        </p>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center">About Me</h2>
+        <p class="text-center">
+          Hi, I'm Alec Garnica — a developer passionate about building creative,
+          interactive experiences with clean code and thoughtful design. I love
+          taking ideas from concept to reality, whether that's crafting a custom
+          Pokédex using JavaScript, designing dynamic web apps with Node.js and
+          APIs, or styling projects with CSS to bring them to life. I'm always
+          learning, experimenting, and pushing myself to build projects that are
+          not just functional, but fun and intuitive to use. Beyond the screen,
+          I care about excellence, collaboration, and creating things that make
+          people smile — whether it's a polished website or a clever new
+          feature. I'm excited to keep growing, keep coding, and keep creating.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="./images/POS System Website.png"
+                class="card-img-top"
+                alt="First Aid POS System"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">
+                  <a
+                    href="https://first-aid-pos-system.onrender.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >First Aid POS System</a
+                  >
+                </h5>
+                <a
+                  href="https://github.com/aworminator/First-Aid-POS-System"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="d-block"
+                  >GitHub Repository</a
+                >
+                <p class="card-text">
+                  Full-stack POS system for first aid inventory management.
+                  Built with Node.js, Express, EJS, PostgreSQL, and JavaScript.
+                  Features dynamic inventory control, price calculation,
+                  responsive design, and session management.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="./images/Simple Pokedex Website.png"
+                class="card-img-top"
+                alt="Simple Web Pokedex"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">
+                  <a
+                    href="https://aworminator.github.io/Simple-Kanto-Pokedex/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Simple Web Pokedex</a
+                  >
+                </h5>
+                <a
+                  href="https://github.com/aworminator/Simple-Kanto-Pokedex"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="d-block"
+                  >GitHub Repository</a
+                >
+                <p class="card-text">
+                  Designed and developed an interactive Pokédex for the first
+                  151 Pokémon using JavaScript, CSS, and Bootstrap. Features
+                  include ID and name search with typo correction, dynamic image
+                  rendering, and responsive design for a smooth user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="./images/API Sunscreen Website.png"
+                class="card-img-top"
+                alt="UV Index Checker"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">
+                  <a
+                    href="https://api-sunscreen-website.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >UV Index Checker</a
+                  >
+                </h5>
+                <a
+                  href="https://github.com/aworminator/API-Sunscreen-Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="d-block"
+                  >GitHub Repository</a
+                >
+                <p class="card-text">
+                  Built a Node.js app using Express, Axios, and EJS templating
+                  to fetch live UV index data from the OpenUV API based on
+                  user-submitted ZIP codes. Integrated error handling, zip code
+                  validation, and dynamic SPF recommendations. Styled the
+                  frontend with custom CSS for a clean, user-friendly
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center">Contact Me</h2>
+        <form id="contact-form" onsubmit="sendEmail(event)">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>
+        &copy; <span id="current-year"></span> My Portfolio. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Av33DaVyg5wDM5N9s",
+        });
+      })();
+
+      function sendEmail(event) {
+        event.preventDefault();
+
+        const serviceID = "default_service";
+        const templateID = "template_xrm7y6m";
+
+        emailjs
+          .sendForm(
+            serviceID,
+            templateID,
+            document.getElementById("contact-form")
+          )
+          .then(
+            () => {
+              alert("Message sent successfully!");
+              document.getElementById("contact-form").reset();
+            },
+            (error) => {
+              alert("Failed to send message. Please try again later.");
+              console.error("EmailJS Error:", error);
+            }
+          );
+      }
+
+      // Set the current year dynamically
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
