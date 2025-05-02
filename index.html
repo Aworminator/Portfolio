@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
+        <a class="navbar-bran" href="#">My Portfolio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -88,7 +88,7 @@
                     href="https://first-aid-pos-system.onrender.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >First Aid POS System</a
+                    >First Aid POS System (open on desktop only)</a
                   >
                 </h5>
                 <a
@@ -188,6 +188,7 @@
               type="text"
               class="form-control"
               id="name"
+              name="from_name"
               placeholder="Your Name"
             />
           </div>
@@ -197,6 +198,7 @@
               type="email"
               class="form-control"
               id="email"
+              name="reply_to"
               placeholder="Your Email"
             />
           </div>
@@ -205,6 +207,7 @@
             <textarea
               class="form-control"
               id="message"
+              name="message"
               rows="4"
               placeholder="Your Message"
             ></textarea>
@@ -237,7 +240,7 @@
       function sendEmail(event) {
         event.preventDefault();
 
-        const serviceID = "default_service";
+        const serviceID = "service_x2fv1ji";
         const templateID = "template_xrm7y6m";
 
         emailjs
