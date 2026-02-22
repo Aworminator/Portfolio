@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,7 +32,12 @@
         <a
           href="#projects"
           class="btn"
-          onclick="document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' }); return false;"
+          onclick="
+            document
+              .querySelector('#projects')
+              .scrollIntoView({ behavior: 'smooth' });
+            return false;
+          "
           >See My Work</a
         >
         <a
@@ -60,6 +65,57 @@
     <section id="projects" class="section alt-bg">
       <h2>Projects</h2>
       <div class="projects-grid">
+        <!-- Wyandotte Family Church -->
+        <div class="card">
+          <img
+            src="./images/Wyandotte Family.png"
+            alt="Wyandotte Family Church Website"
+          />
+          <div class="card-content">
+            <h3>Wyandotte Family Church</h3>
+            <p>
+              Custom church website built with <strong>HTML</strong>,
+              <strong>CSS</strong>, and <strong>JavaScript</strong>, hosted and
+              powered by <strong>Subsplash</strong>. Includes responsive
+              layouts, tailored content sections for ministries and events, and
+              embedded media and giving features through the Subsplash platform.
+            </p>
+            <div class="links">
+              <a href="https://wyandottefamily.church/" target="_blank"
+                >Live Site</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Circle Card Card App -->
+        <div class="card">
+          <img src="./images/Circle-Card-Website.png" alt="Birthday Card App" />
+          <div class="card-content">
+            <h3>Circle Cards</h3>
+            <p>
+              A full-stack web application built with
+              <strong>Next.js</strong> and <strong>TypeScript</strong> that
+              enables users to create personalized digital birthday cards.
+              Features include image uploads, voice message recording and
+              playback, and a dynamic card grid interface. Utilizes
+              <strong>Supabase</strong> for backend data storage and
+              authentication, implementing full CRUD operations with real-time
+              data synchronization. The app provides an intuitive modal-based
+              editing system with media file handling and responsive UI design.
+            </p>
+            <div class="links">
+              <a href="https://circle-cards.fly.dev/" target="_blank"
+                >Live Site</a
+              >
+              <a
+                href="https://github.com/Aworminator/Birthday-Card-App"
+                target="_blank"
+                >GitHub Repository</a
+              >
+            </div>
+          </div>
+        </div>
+
         <!-- Project Tracker -->
         <div class="card">
           <img
@@ -70,8 +126,8 @@
             <h3>Project Tracker Dashboard</h3>
             <p>
               A full-stack project management application with role-based
-              authentication using <strong>Supabase Auth</strong>. Built with
-              <strong>Node.js</strong>, <strong>Express</strong>,
+              authentication using <strong>Supabase Authorization</strong>.
+              Built with <strong>Node.js</strong>, <strong>Express</strong>,
               <strong>JavaScript</strong>, and <strong>CSS</strong>, this
               dashboard demonstrates advanced authorization controls where
               Admins can create/edit/delete projects, Managers can assign tasks,
@@ -86,7 +142,7 @@
                 >Live Site</a
               >
               <a
-                href="https://github.com/Aworminator/Project-Tracker-2025"
+                href="https://github.com/Aworminator/Project-Tracker"
                 target="_blank"
                 >GitHub Repository</a
               >
@@ -294,7 +350,7 @@
           .sendForm(
             "service_x2fv1ji",
             "template_xrm7y6m",
-            document.getElementById("contact-form")
+            document.getElementById("contact-form"),
           )
           .then(
             () => {
@@ -304,7 +360,7 @@
             (error) => {
               alert("Failed to send message.");
               console.error(error);
-            }
+            },
           );
       }
       document.getElementById("current-year").textContent =
